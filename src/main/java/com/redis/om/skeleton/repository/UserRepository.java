@@ -9,6 +9,5 @@ import java.util.Set;
 public interface UserRepository extends RedisDocumentRepository<User,String> {
     // find one by property
 //    Optional<User> findOneByName(String name);
-
 //    Set<String> getKeysByPattern(String key);
 }

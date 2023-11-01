@@ -16,8 +16,8 @@ public class UserController {
     @Autowired
     UserRepository repo;
 
-//    @Autowired
-//    RedisTemplate<String, Object> redisTemplate;
+    @Autowired
+    RedisTemplate<String, Object> redisTemplate;
 
     @GetMapping("/test")
     public String status(){
@@ -39,10 +39,10 @@ public class UserController {
         return "체크완료";
     }
 
-//    @GetMapping("/keys/{key}")
-//    public String save(@PathVariable String key){
-//        log.info("name 변수체크 {}",key);
-//        log.info("name 변수체크 {}", redisTemplate.keys(key));
-//        return "Success save";
-//    }
+    @GetMapping("/keys/{key}")
+    public String save(@PathVariable String key){
+        log.info("name 변수체크 {}",key);
+        log.info("name 변수체크 {}", redisTemplate.keys(key));
+        return "Success save";
+    }
 }
